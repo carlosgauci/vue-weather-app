@@ -2,7 +2,7 @@
   <section class="container">
     <!-- Date -->
     <p class="date">{{ getCurrentDate(weather.current.dt) }}</p>
-    <p>Current Weather Conditions in Malta</p>
+    <p class="title">Current Weather Conditions in Malta</p>
 
     <div class="flex-container">
       <!-- Main Section -->
@@ -58,7 +58,7 @@
         <!-- Pressure -->
         <div class="flex-group">
           <p>Pressure</p>
-          <p>{{ Math.round(weather.current.pressure) }}hpa</p>
+          <p>{{ Math.round(weather.current.pressure) }} hpa</p>
         </div>
       </section>
     </div>
@@ -124,6 +124,10 @@ export default {
 .date {
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
+}
+
+.title {
+  text-align: center;
 }
 
 .svg {

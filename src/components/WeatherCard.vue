@@ -8,17 +8,17 @@
     <div class="svg"><WeatherIcon :currentWeather="day.weather[0].main" /></div>
 
     <!-- Weather Description -->
-    <p>
+    <p class="text">
       {{
         getWeatherConditions(day.weather[0].main, day.weather[0].description)
       }}
     </p>
 
     <!-- Extra Info -->
-    <p>High {{ Math.round(day.temp.max) }}°C</p>
-    <p>Low {{ Math.round(day.temp.min) }}°C</p>
-    <p>UV {{ Math.round(day.uvi) }}</p>
-    <p>{{ getWind(day.wind_deg, day.wind_speed) }} kts</p>
+    <p class="text">High {{ Math.round(day.temp.max) }}°C</p>
+    <p class="text">Low {{ Math.round(day.temp.min) }}°C</p>
+    <p class="text">UV {{ Math.round(day.uvi) }}</p>
+    <p class="text">{{ getWind(day.wind_deg, day.wind_speed) }} kts</p>
   </div>
 </template>
 
