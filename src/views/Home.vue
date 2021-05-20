@@ -30,7 +30,6 @@ export default {
         `https://api.openweathermap.org/data/2.5/onecall?lat=35.8997&lon=14.5147&units=metric&exclude=minutely,hourly&appid=${process.env.VUE_APP_APIKEY}`
       );
       const data = await res.json();
-      console.log(data);
       return data;
     },
   },
