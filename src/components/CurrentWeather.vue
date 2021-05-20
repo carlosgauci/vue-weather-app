@@ -34,10 +34,13 @@
 
       <!-- Extra Info Section -->
       <section class="extra-info">
+        <!-- UV -->
         <div class="flex-group">
           <p>UV</p>
           <p>{{ Math.round(weather.current.uvi) }}</p>
         </div>
+
+        <!-- Wind Speed -->
         <div class="flex-group">
           <p>Wind Speed</p>
           <p>
@@ -45,10 +48,14 @@
             kts
           </p>
         </div>
+
+        <!-- Humidity -->
         <div class="flex-group">
           <p>Humidity</p>
           <p>{{ Math.round(weather.current.humidity) }}%</p>
         </div>
+
+        <!-- Pressure -->
         <div class="flex-group">
           <p>Pressure</p>
           <p>{{ Math.round(weather.current.pressure) }}hpa</p>

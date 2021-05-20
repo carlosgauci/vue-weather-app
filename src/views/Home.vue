@@ -1,14 +1,17 @@
 <template>
   <CurrentWeather v-if="!loading" :weather="weatherData" />
+  <Forecast v-if="!loading" :weather="weatherData.daily.slice(1)" />
 </template>
 
 <script>
 import CurrentWeather from "../components/CurrentWeather";
+import Forecast from "../components/Forecast";
 
 export default {
   name: "Home",
   components: {
     CurrentWeather,
+    Forecast,
   },
 
   data() {
