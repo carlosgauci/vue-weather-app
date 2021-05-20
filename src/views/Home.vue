@@ -1,6 +1,8 @@
 <template>
-  <CurrentWeather v-if="!loading" :weather="weatherData" />
-  <Forecast v-if="!loading" :weather="weatherData.daily.slice(1)" />
+  <div class="site-container">
+    <CurrentWeather v-if="!loading" :weather="weatherData" />
+    <Forecast v-if="!loading" :weather="weatherData.daily.slice(1)" />
+  </div>
 </template>
 
 <script>
@@ -40,3 +42,24 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.site-container {
+  min-height: 100vh;
+  background-image: url("../assets/bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .site-container {
+    background-image: url("../assets/bg-lg.jpg");
+  }
+}
+</style>
